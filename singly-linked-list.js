@@ -22,12 +22,12 @@ class SinglyLinkedList{
 			this.tail = newNode;
 			
 		}
-	this.length +=1
-	return this;
+	    this.length +=1
+	    return this;
     }
     
-    pop(val){
-        if(!this.head) return undefine
+    pop(){
+        if(!this.head) return undefined
         var current = this.head;
         var newTail = this.head 
         while(current){
@@ -42,8 +42,16 @@ class SinglyLinkedList{
             this.tail = null;
         }
         return current;
-        }  
-    }
+	}
+	
+	indexAt(index){
+		if(!this.head) return undefined
+		let node = this.head; 
+		for(i = 0; i < index; i++){
+			node = next(node)
+		}
+		return node
+	}
 	
 	
 }
